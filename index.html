@@ -1,677 +1,655 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lactalis Nutrition Medical Summit 2026</title>
-
-  <!-- Open Graph / WhatsApp Preview -->
-  <meta property="og:title" content="Lactalis Summit 2026 — Invitación">
-  <meta property="og:description" content="Nurturing the future across every stage of life. 27–30 Mayo, Cancún.">
-  <meta property="og:url" content="https://iveetjo.github.io/lactalis-summit/">
-  <meta property="og:image" content="https://iveetjo.github.io/lactalis-summit/Preview_invite.png">
-  <meta property="og:type" content="website">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Lactalis Summit 2026 — Invitación">
-  <meta name="twitter:description" content="Nurturing the future across every stage of life. 27–30 Mayo, Cancún.">
-  <meta name="twitter:image" content="https://iveetjo.github.io/lactalis-summit/Preview_invite.png">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Lato:wght@300;400;700&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071e36">
+  <meta name="description" content="Invitación exclusiva de Lactalis: El Arte del Queso y la Buena Nutrición, 21 de octubre de 2026 en Valle de Guadalupe, Ensenada.">
+  <title>Lactalis · El Arte del Queso y la Buena Nutrición</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23071e36'/%3E%3Cpath d='M17 22c10-8 26-7 34 1M15 31c12-8 29-7 36 1M18 41c10-6 24-5 30 1' fill='none' stroke='%23d7b56d' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
   <style>
-    * {
+    :root {
+      --navy: #071e36;
+      --navy-soft: #102d4a;
+      --cream: #f7f1e6;
+      --paper: #fffdf8;
+      --gold: #c9a557;
+      --gold-light: #e3ca8a;
+      --wine: #7c2438;
+      --ink: #142333;
+      --muted: #66717b;
+      --line: rgba(7,30,54,.14);
+      --shadow: 0 24px 70px rgba(4,22,38,.16);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
       margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html,
-    body {
-      min-height: 100vh;
-    }
-
-    body {
-      font-family: 'Lato', sans-serif;
-      background: linear-gradient(160deg, #0a1628 0%, #102040 40%, #0d2a1a 100%);
-      min-height: 100vh;
-      padding: 2rem 1rem;
-      position: relative;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
       overflow-x: hidden;
     }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
 
-    .particles {
+    .skip-link {
       position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 0;
+      left: 1rem;
+      top: -5rem;
+      z-index: 100;
+      background: white;
+      padding: .75rem 1rem;
+      border-radius: 999px;
     }
+    .skip-link:focus { top: 1rem; }
 
-    .particle {
-      position: absolute;
-      width: 2px;
-      height: 2px;
-      background: rgba(255, 255, 255, 0.4);
-      border-radius: 50%;
-      animation: twinkle 3s infinite ease-in-out;
-    }
-
-    @keyframes twinkle {
-
-      0%,
-      100% {
-        opacity: 0.2;
-        transform: scale(1);
-      }
-
-      50% {
-        opacity: 0.9;
-        transform: scale(1.5);
-      }
-    }
-
-    .gold-line {
-      width: 80px;
-      height: 1.5px;
-      background: linear-gradient(90deg, transparent, #c9a84c, transparent);
-      margin: 0 auto 1rem;
-    }
-
-    .card {
-      max-width: 680px;
-      margin: 0 auto;
-      background: rgba(255, 255, 255, 0.04);
-      border: 0.5px solid rgba(201, 168, 76, 0.3);
-      border-radius: 20px;
-      padding: 3rem 2.5rem;
+    .hero {
+      min-height: 100svh;
       position: relative;
-      z-index: 1;
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-    }
-
-    .corner {
-      position: absolute;
-      width: 40px;
-      height: 40px;
-      border-color: rgba(201, 168, 76, 0.5);
-      border-style: solid;
-    }
-
-    .corner-tl {
-      top: 12px;
-      left: 12px;
-      border-width: 1.5px 0 0 1.5px;
-      border-radius: 4px 0 0 0;
-    }
-
-    .corner-tr {
-      top: 12px;
-      right: 12px;
-      border-width: 1.5px 1.5px 0 0;
-      border-radius: 0 4px 0 0;
-    }
-
-    .corner-bl {
-      bottom: 12px;
-      left: 12px;
-      border-width: 0 0 1.5px 1.5px;
-      border-radius: 0 0 0 4px;
-    }
-
-    .corner-br {
-      bottom: 12px;
-      right: 12px;
-      border-width: 0 1.5px 1.5px 0;
-      border-radius: 0 0 4px 0;
-    }
-
-    .header {
-      text-align: center;
-      margin-bottom: 1.5rem;
-    }
-
-    .logos {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 1.5rem;
-      margin-bottom: 1.5rem;
-      flex-wrap: wrap;
-    }
-
-    .logo-badge {
-      background: rgba(255, 255, 255, 0.06);
-      border: 0.5px solid rgba(201, 168, 76, 0.25);
-      border-radius: 8px;
-      padding: 6px 14px;
-      font-size: 12px;
-      font-weight: 700;
-      color: #c9a84c;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    .honor-text {
-      font-size: 11px;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: #c9a84c;
-      margin-bottom: 0.6rem;
-    }
-
-    .main-title {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: clamp(22px, 4vw, 32px);
-      font-weight: 500;
-      color: #ffffff;
-      line-height: 1.3;
-      margin-bottom: 0.5rem;
-    }
-
-    .main-title em {
-      font-style: italic;
-      color: #e8d5a0;
-    }
-
-    .subtitle-tag {
-      font-size: 11px;
-      letter-spacing: 3px;
-      color: rgba(255, 255, 255, 0.5);
-      text-transform: uppercase;
-    }
-
-    .divider {
-      margin: 1.5rem 0;
-    }
-
-    .event-info {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      margin: 1.5rem 0;
+      place-items: end start;
+      isolation: isolate;
+      color: white;
+      background: var(--navy);
     }
-
-    .info-block {
-      background: rgba(255, 255, 255, 0.04);
-      border: 0.5px solid rgba(201, 168, 76, 0.2);
-      border-radius: 10px;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    .info-label {
-      font-size: 10px;
-      letter-spacing: 2px;
-      color: #c9a84c;
-      text-transform: uppercase;
-      margin-bottom: 4px;
-    }
-
-    .info-value {
-      font-size: 15px;
-      color: #ffffff;
-      font-weight: 400;
-    }
-
-    .info-value strong {
-      font-weight: 700;
-    }
-
-    .countdown-section {
-      text-align: center;
-      margin: 1.5rem 0;
-    }
-
-    .cd-label {
-      font-size: 10px;
-      letter-spacing: 3px;
-      color: #c9a84c;
-      text-transform: uppercase;
-      margin-bottom: 1rem;
-    }
-
-    .countdown-grid {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .cd-block {
-      background: rgba(201, 168, 76, 0.08);
-      border: 0.5px solid rgba(201, 168, 76, 0.35);
-      border-radius: 10px;
-      padding: 14px 18px;
-      min-width: 72px;
-      text-align: center;
-    }
-
-    .cd-number {
-      font-family: 'Playfair Display', serif;
-      font-size: 32px;
-      font-weight: 500;
-      color: #c9a84c;
-      line-height: 1;
-      display: block;
-    }
-
-    .cd-unit {
-      font-size: 9px;
-      letter-spacing: 2px;
-      color: rgba(255, 255, 255, 0.4);
-      text-transform: uppercase;
-      margin-top: 4px;
-      display: block;
-    }
-
-    .cd-sep {
-      display: flex;
-      align-items: center;
-      color: rgba(201, 168, 76, 0.4);
-      font-size: 24px;
-      padding-bottom: 20px;
-    }
-
-    .hotel-section {
-      margin: 1.5rem 0;
-      background: rgba(255, 255, 255, 0.03);
-      border: 0.5px solid rgba(201, 168, 76, 0.15);
-      border-radius: 12px;
-      overflow: hidden;
-    }
-
-    .hotel-img-wrap {
-      width: 100%;
-      height: 200px;
-      background: linear-gradient(135deg, #1a3a5c 0%, #0d4a2f 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hotel-img-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .hotel-overlay {
+    .hero::before {
+      content: "";
       position: absolute;
-      bottom: 0;
+      inset: 0;
+      z-index: -2;
+      background: url("assets/valle-guadalupe.png") center / cover no-repeat;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(90deg, rgba(4,19,34,.94) 0%, rgba(4,19,34,.72) 45%, rgba(4,19,34,.18) 78%),
+        linear-gradient(0deg, rgba(4,19,34,.92) 0%, rgba(4,19,34,.12) 65%);
+    }
+    .topline {
+      position: absolute;
+      top: 0;
       left: 0;
       right: 0;
-      background: linear-gradient(0deg, rgba(10, 22, 40, 0.92) 0%, transparent 100%);
-      padding: 1.2rem;
-      text-align: center;
-    }
-
-    .hotel-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 18px;
-      color: #fff;
-      font-style: italic;
-    }
-
-    .hotel-loc {
-      font-size: 11px;
-      color: #c9a84c;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    .hotel-info-row {
-      display: flex;
-      justify-content: space-around;
-      padding: 0.75rem 1rem;
-      font-size: 12px;
-      color: rgba(255, 255, 255, 0.6);
-    }
-
-    .hotel-info-row span {
       display: flex;
       align-items: center;
-      gap: 4px;
-    }
-
-    .benefits {
-      margin: 1.5rem 0;
-    }
-
-    .benefits-title {
-      font-size: 10px;
-      letter-spacing: 3px;
-      color: #c9a84c;
+      justify-content: space-between;
+      padding: clamp(1.3rem, 3vw, 2.2rem) clamp(1.2rem, 5vw, 5rem);
+      font-size: .74rem;
+      letter-spacing: .2em;
       text-transform: uppercase;
-      margin-bottom: 0.75rem;
-      text-align: center;
     }
-
-    .benefits-list {
+    .brand-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: .7rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+    }
+    .brand-mark::before {
+      content: "";
+      width: 2.4rem;
+      height: 1rem;
+      border: 1px solid var(--gold-light);
+      border-radius: 50%;
+      transform: rotate(-6deg);
+    }
+    .edition { color: rgba(255,255,255,.68); }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: min(760px, 100%);
+      padding: clamp(7rem, 15vh, 11rem) clamp(1.2rem, 5vw, 5rem) clamp(3rem, 8vh, 5.5rem);
+    }
+    .hero-logo-stage {
+      position: absolute;
+      z-index: 1;
+      top: 32%;
+      right: clamp(2rem, 8vw, 8rem);
+      width: clamp(300px, 39vw, 590px);
+      aspect-ratio: 2.5 / 1;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px;
+      place-items: center;
+      opacity: 0;
+      animation: logo-arrival 1.5s cubic-bezier(.2,.8,.2,1) .25s forwards;
+      filter: drop-shadow(0 18px 34px rgba(0,0,0,.32));
     }
-
-    .benefit-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 13px;
-      color: rgba(255, 255, 255, 0.7);
-    }
-
-    .benefit-dot {
-      width: 5px;
-      height: 5px;
-      background: #c9a84c;
+    .hero-logo-stage::before,
+    .hero-logo-stage::after {
+      content: "";
+      position: absolute;
+      inset: 14% 1%;
+      border: 2px solid rgba(255,255,255,.72);
+      border-left-color: transparent;
+      border-right-color: transparent;
       border-radius: 50%;
-      flex-shrink: 0;
+      animation: logo-orbit 7s ease-in-out infinite;
     }
-
-    .music-bar {
+    .hero-logo-stage::after {
+      inset: 20% 4%;
+      border-color: rgba(227,202,138,.92);
+      border-top-color: transparent;
+      border-bottom-color: transparent;
+      animation-direction: reverse;
+      animation-duration: 9s;
+    }
+    .hero-logo-word {
+      position: relative;
+      z-index: 2;
+      padding: .7rem 1.5rem;
+      color: white;
+      font-size: clamp(2.1rem, 4.8vw, 4.7rem);
+      font-weight: 760;
+      letter-spacing: .08em;
+      line-height: 1;
+      text-shadow: 0 2px 24px rgba(0,0,0,.45);
+      animation: logo-breathe 4s ease-in-out 1.8s infinite;
+    }
+    .hero-logo-word span { color: var(--gold-light); }
+    .hero-logo-caption {
+      position: absolute;
+      bottom: 3%;
+      color: rgba(255,255,255,.76);
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+    }
+    @keyframes logo-arrival {
+      from { opacity: 0; transform: scale(.82) translateY(20px); filter: blur(8px) drop-shadow(0 18px 34px rgba(0,0,0,.32)); }
+      to { opacity: 1; transform: scale(1) translateY(0); filter: blur(0) drop-shadow(0 18px 34px rgba(0,0,0,.32)); }
+    }
+    @keyframes logo-orbit {
+      0%, 100% { transform: scale(.96) rotate(-4deg); opacity: .55; }
+      50% { transform: scale(1.03) rotate(4deg); opacity: 1; }
+    }
+    @keyframes logo-breathe {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.025); }
+    }
+    .eyebrow {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 10px;
-      margin: 1.5rem 0 0.5rem;
-      padding: 10px;
-      background: rgba(201, 168, 76, 0.06);
-      border-radius: 30px;
-      border: 0.5px solid rgba(201, 168, 76, 0.2);
+      gap: .9rem;
+      margin: 0 0 1.35rem;
+      color: var(--gold-light);
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .24em;
+      text-transform: uppercase;
     }
-
-    .music-btn {
-      background: rgba(201, 168, 76, 0.15);
-      border: 0.5px solid rgba(201, 168, 76, 0.4);
-      border-radius: 50%;
-      width: 36px;
-      height: 36px;
-      cursor: pointer;
+    .eyebrow::before { content: ""; width: 2.8rem; height: 1px; background: currentColor; }
+    h1, h2, .serif { font-family: Georgia, "Times New Roman", serif; }
+    h1 {
+      max-width: 720px;
+      margin: 0;
+      font-size: clamp(3.15rem, 8.5vw, 7.5rem);
+      font-weight: 400;
+      line-height: .88;
+      letter-spacing: -.055em;
+      text-wrap: balance;
+    }
+    h1 em { color: var(--gold-light); font-weight: 400; }
+    .hero-intro {
+      max-width: 600px;
+      margin: 1.6rem 0 0;
+      color: rgba(255,255,255,.82);
+      font-size: clamp(1rem, 1.6vw, 1.22rem);
+    }
+    .hero-meta {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #c9a84c;
-      font-size: 14px;
-      transition: background 0.2s;
-    }
-
-    .music-btn:hover {
-      background: rgba(201, 168, 76, 0.3);
-    }
-
-    .music-label {
-      font-size: 12px;
-      color: rgba(255, 255, 255, 0.5);
-      letter-spacing: 1px;
-    }
-
-    .visualizer {
-      display: flex;
-      align-items: flex-end;
-      gap: 3px;
-      height: 20px;
-    }
-
-    .vbar {
-      width: 3px;
-      background: #c9a84c;
-      border-radius: 2px;
-      opacity: 0.5;
-    }
-
-    .vbar.playing {
-      animation: bounce 0.6s ease-in-out infinite alternate;
-    }
-
-    @keyframes bounce {
-      0% {
-        height: 3px;
-        opacity: 0.4;
-      }
-
-      100% {
-        height: 18px;
-        opacity: 0.9;
-      }
-    }
-
-    .footer-note {
-      text-align: center;
-      margin-top: 1.5rem;
-      font-size: 12px;
-      color: rgba(255, 255, 255, 0.35);
-      letter-spacing: 1px;
-      line-height: 1.8;
-    }
-
-    .footer-logos {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 1.5rem;
+      flex-wrap: wrap;
+      gap: .7rem 1.75rem;
       margin-top: 2rem;
       padding-top: 1.5rem;
-      border-top: 0.5px solid rgba(201, 168, 76, 0.15);
-      flex-wrap: wrap;
+      border-top: 1px solid rgba(255,255,255,.22);
+      font-size: .83rem;
+      font-weight: 650;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    .hero-meta span { display: inline-flex; align-items: center; gap: .6rem; }
+    .hero-meta span::before { content: ""; width: .35rem; height: .35rem; border-radius: 50%; background: var(--gold-light); }
+    .scroll-cue {
+      position: absolute;
+      right: clamp(1.2rem, 5vw, 5rem);
+      bottom: 2.5rem;
+      writing-mode: vertical-rl;
+      font-size: .68rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.64);
     }
 
-    .footer-logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 13px;
-      color: rgba(255, 255, 255, 0.4);
-      font-style: italic;
+    .countdown-wrap {
+      position: relative;
+      z-index: 2;
+      margin: -1.5rem auto 0;
+      width: min(1120px, calc(100% - 2rem));
+      padding: clamp(1.6rem, 4vw, 3rem);
+      background: var(--paper);
+      box-shadow: var(--shadow);
+      border-top: 3px solid var(--gold);
+    }
+    .countdown-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.4rem;
+    }
+    .countdown-title {
+      margin: 0;
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.6rem, 3vw, 2.45rem);
+      font-weight: 400;
+    }
+    .countdown-title small {
+      display: block;
+      margin-bottom: .25rem;
+      color: var(--wine);
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      font-size: .7rem;
+      font-weight: 800;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+    .countdown-note { margin: 0; color: var(--muted); font-size: .85rem; text-align: right; }
+    .countdown {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border: 1px solid var(--line);
+    }
+    .time-unit {
+      min-width: 0;
+      padding: clamp(1rem, 3vw, 2.15rem) .5rem;
+      text-align: center;
+      border-right: 1px solid var(--line);
+    }
+    .time-unit:last-child { border-right: 0; }
+    .time-value {
+      display: block;
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.4rem, 7vw, 5.2rem);
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+    }
+    .time-label {
+      display: block;
+      margin-top: .65rem;
+      color: var(--muted);
+      font-size: clamp(.62rem, 1.5vw, .78rem);
+      font-weight: 750;
+      letter-spacing: .17em;
+      text-transform: uppercase;
     }
 
-    @media (max-width: 480px) {
-      .card {
-        padding: 2rem 1.2rem;
-      }
+    .story {
+      display: grid;
+      grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+      width: min(1120px, calc(100% - 2rem));
+      margin: 0 auto;
+      padding: clamp(5rem, 10vw, 9rem) 0;
+      gap: clamp(2.5rem, 7vw, 7rem);
+      align-items: center;
+    }
+    .story-kicker { color: var(--wine); font-size: .75rem; font-weight: 800; letter-spacing: .22em; text-transform: uppercase; }
+    .story h2, .agenda h2 {
+      margin: .75rem 0 1.25rem;
+      color: var(--navy);
+      font-size: clamp(2.6rem, 6vw, 5.25rem);
+      font-weight: 400;
+      line-height: .98;
+      letter-spacing: -.04em;
+      text-wrap: balance;
+    }
+    .story-copy p { margin: 0; color: #485866; font-size: clamp(1rem, 1.6vw, 1.18rem); }
+    .experience-card {
+      position: relative;
+      min-height: 530px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .experience-card img { width: 100%; height: 100%; min-height: 530px; object-fit: cover; }
+    .experience-card figcaption {
+      position: absolute;
+      left: 1.3rem;
+      right: 1.3rem;
+      bottom: 1.3rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem 1.2rem;
+      color: white;
+      background: rgba(5,25,43,.84);
+      backdrop-filter: blur(10px);
+      font-size: .74rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
 
-      .event-info {
-        grid-template-columns: 1fr;
-      }
+    .agenda-section {
+      position: relative;
+      color: white;
+      background: var(--navy);
+      overflow: hidden;
+    }
+    .agenda-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: .08;
+      background: url("assets/valle-guadalupe.png") center / cover no-repeat;
+      filter: grayscale(1);
+    }
+    .agenda {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: .75fr 1.25fr;
+      gap: clamp(3rem, 8vw, 8rem);
+      width: min(1120px, calc(100% - 2rem));
+      margin: 0 auto;
+      padding: clamp(5rem, 11vw, 9rem) 0;
+    }
+    .agenda-intro { position: sticky; top: 2rem; align-self: start; }
+    .agenda .story-kicker { color: var(--gold-light); }
+    .agenda h2 { color: white; }
+    .agenda-intro p { max-width: 420px; color: rgba(255,255,255,.65); }
+    .agenda-list { margin: 0; padding: 0; list-style: none; }
+    .agenda-item {
+      display: grid;
+      grid-template-columns: 7.5rem 1fr;
+      gap: 1.5rem;
+      position: relative;
+      padding: 0 0 2.2rem;
+    }
+    .agenda-item::before {
+      content: "";
+      position: absolute;
+      left: 8.1rem;
+      top: 1.15rem;
+      bottom: 0;
+      width: 1px;
+      background: rgba(227,202,138,.3);
+    }
+    .agenda-item:last-child { padding-bottom: 0; }
+    .agenda-item:last-child::before { display: none; }
+    .agenda-time {
+      padding-top: .1rem;
+      color: var(--gold-light);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.08rem;
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+    .agenda-detail { position: relative; padding-left: 1.4rem; }
+    .agenda-detail::before {
+      content: "";
+      position: absolute;
+      left: -.15rem;
+      top: .45rem;
+      width: .65rem;
+      height: .65rem;
+      border: 2px solid var(--gold-light);
+      border-radius: 50%;
+      background: var(--navy);
+    }
+    .agenda-detail h3 { margin: 0; font-size: 1.07rem; font-weight: 620; }
+    .agenda-detail p { margin: .35rem 0 0; color: rgba(255,255,255,.56); font-size: .9rem; }
+    .highlight .agenda-detail {
+      margin: -.9rem 0 .7rem;
+      padding: 1.2rem 1.25rem 1.2rem 2.6rem;
+      border: 1px solid rgba(227,202,138,.4);
+      background: rgba(255,255,255,.05);
+    }
+    .highlight .agenda-detail::before { left: 1rem; top: 1.55rem; }
+    .tags { display: flex; flex-wrap: wrap; gap: .45rem; margin-top: .75rem; }
+    .tag { padding: .22rem .55rem; border: 1px solid rgba(255,255,255,.2); color: rgba(255,255,255,.72); font-size: .67rem; letter-spacing: .08em; text-transform: uppercase; }
 
-      .benefits-list {
-        grid-template-columns: 1fr;
-      }
+    .panorama {
+      min-height: 58svh;
+      display: grid;
+      place-items: center;
+      padding: 3rem 1rem;
+      color: white;
+      text-align: center;
+      background:
+        linear-gradient(rgba(7,30,54,.32), rgba(7,30,54,.62)),
+        url("assets/valle-guadalupe.png") center / cover no-repeat;
+    }
+    .panorama blockquote {
+      max-width: 900px;
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.1rem, 5.4vw, 5rem);
+      font-weight: 400;
+      line-height: 1.02;
+      letter-spacing: -.035em;
+      text-shadow: 0 2px 22px rgba(0,0,0,.3);
+    }
+    .panorama span { display: block; margin-top: 1.4rem; font-family: Inter, ui-sans-serif, system-ui, sans-serif; font-size: .72rem; font-weight: 700; letter-spacing: .24em; text-transform: uppercase; }
 
-      .cd-block {
-        min-width: 60px;
-        padding: 10px 12px;
-      }
+    .finale {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: end;
+      gap: 3rem;
+      width: min(1120px, calc(100% - 2rem));
+      margin: 0 auto;
+      padding: clamp(5rem, 11vw, 9rem) 0;
+    }
+    .date-lockup { color: var(--navy); font-family: Georgia, "Times New Roman", serif; font-size: clamp(3.2rem, 9vw, 7.8rem); line-height: .8; letter-spacing: -.06em; }
+    .date-lockup span { display: block; margin-top: 1rem; color: var(--wine); font-family: Inter, ui-sans-serif, system-ui, sans-serif; font-size: clamp(.82rem, 1.4vw, 1rem); font-weight: 800; letter-spacing: .2em; text-transform: uppercase; }
+    .finale-copy { max-width: 360px; }
+    .finale-copy p { margin: 0 0 1.4rem; color: #4c5d69; }
+    .capacity {
+      display: inline-flex;
+      align-items: center;
+      gap: .7rem;
+      padding: .7rem 1rem;
+      border: 1px solid var(--gold);
+      color: var(--navy);
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    .capacity::before { content: "40"; display: grid; place-items: center; width: 2rem; height: 2rem; border-radius: 50%; color: white; background: var(--wine); font-family: Georgia, "Times New Roman", serif; letter-spacing: 0; }
+    footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.5rem clamp(1.2rem, 5vw, 5rem);
+      color: rgba(255,255,255,.66);
+      background: #041425;
+      font-size: .72rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
 
-      .cd-number {
-        font-size: 26px;
-      }
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
 
-      .hotel-img-wrap {
-        height: 160px;
+    @media (max-width: 780px) {
+      .hero { min-height: 850px; align-items: end; }
+      .hero::before { background-position: 55% center; }
+      .hero::after { background: linear-gradient(0deg, rgba(4,19,34,.98) 0%, rgba(4,19,34,.67) 54%, rgba(4,19,34,.1) 100%); }
+      .edition, .scroll-cue { display: none; }
+      .hero-content { padding-bottom: 4rem; }
+      .hero-logo-stage {
+        top: 13%;
+        left: 50%;
+        right: auto;
+        width: min(88vw, 470px);
+        transform: translateX(-50%);
+        animation-name: logo-arrival-mobile;
+        background: radial-gradient(ellipse, rgba(4,19,34,.72) 0%, rgba(4,19,34,.35) 54%, transparent 72%);
       }
+      @keyframes logo-arrival-mobile {
+        from { opacity: 0; transform: translateX(-50%) scale(.82) translateY(20px); filter: blur(8px); }
+        to { opacity: 1; transform: translateX(-50%) scale(1) translateY(0); filter: blur(0); }
+      }
+      .countdown-head { display: block; }
+      .countdown-note { margin-top: .4rem; text-align: left; }
+      .story, .agenda, .finale { grid-template-columns: 1fr; }
+      .story { padding-top: 5.5rem; }
+      .experience-card, .experience-card img { min-height: 420px; }
+      .agenda-intro { position: static; }
+      .agenda-item { grid-template-columns: 5.5rem 1fr; gap: .8rem; }
+      .agenda-item::before { left: 5.95rem; }
+      .agenda-time { font-size: .95rem; }
+      .finale { align-items: start; }
+      footer { align-items: flex-start; flex-direction: column; }
+    }
+    @media (max-width: 430px) {
+      h1 { font-size: 3.25rem; }
+      .hero-meta { display: grid; }
+      .countdown-wrap { width: calc(100% - 1rem); padding: 1.1rem; }
+      .time-unit { padding: 1.15rem .2rem; }
+      .agenda-item { grid-template-columns: 4.7rem 1fr; }
+      .agenda-item::before { left: 5.15rem; }
+      .experience-card figcaption { flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .hero-logo-stage, .hero-logo-stage::before, .hero-logo-stage::after, .hero-logo-word { animation: none; opacity: 1; }
     }
   </style>
 </head>
-
 <body>
+  <a class="skip-link" href="#experiencia">Ir al contenido</a>
 
-  <div class="particles" id="particles"></div>
-
-  <div class="card">
-    <div class="corner corner-tl"></div>
-    <div class="corner corner-tr"></div>
-    <div class="corner corner-bl"></div>
-    <div class="corner corner-br"></div>
-
-    <div class="header">
-      <div class="logos">
-        <span class="logo-badge">Alula</span>
-        <span class="logo-badge" style="font-size:14px; letter-spacing:3px;">LACTALIS</span>
-        <span class="logo-badge">Pedialact</span>
-      </div>
-      <div class="honor-text">Le invita a su magno evento</div>
-      <div class="gold-line"></div>
-      <div class="main-title">
-        Lactalis Nutrition<br>
-        <em>Medical Summit 2026</em>
-      </div>
-      <div style="margin-top:8px;" class="subtitle-tag">Nurturing the future across every stage of life</div>
+  <header class="hero" aria-labelledby="titulo-evento">
+    <div class="topline">
+      <span class="brand-mark">Lactalis</span>
+      <span class="edition">Invitación privada · Edición 2026</span>
     </div>
-
-    <div class="divider">
-      <div class="gold-line"></div>
+    <div class="hero-logo-stage" aria-label="Lactalis">
+      <div class="hero-logo-word">LACTA<span>LIS</span></div>
+      <div class="hero-logo-caption">Savoir-faire laitier</div>
     </div>
-
-    <div class="event-info">
-      <div class="info-block">
-        <div class="info-label">📅 Fecha</div>
-        <div class="info-value"><strong>27 – 30</strong> Mayo 2026</div>
-      </div>
-      <div class="info-block">
-        <div class="info-label">📍 Sede</div>
-        <div class="info-value">Cancún,<br><strong>Quintana Roo</strong></div>
+    <div class="hero-content">
+      <p class="eyebrow">Una experiencia gastronómica</p>
+      <h1 id="titulo-evento">El arte del queso <em>y la buena nutrición</em></h1>
+      <p class="hero-intro">Una tarde especial en el Valle de Guadalupe, donde el sabor, la gastronomía y la esencia de Lactalis se unen en una experiencia diseñada especialmente para ti.</p>
+      <div class="hero-meta" aria-label="Datos principales del evento">
+        <span>21 de octubre de 2026</span>
+        <span>Valle de Guadalupe · Ensenada</span>
       </div>
     </div>
+    <span class="scroll-cue" aria-hidden="true">Descubre la experiencia</span>
+  </header>
 
-    <div class="countdown-section">
-      <div class="cd-label">⏳ &nbsp;El evento comienza en</div>
-      <div class="countdown-grid" id="countdown">
-        <div class="cd-block"><span class="cd-number" id="cd-d">--</span><span class="cd-unit">Días</span></div>
-        <div class="cd-sep">·</div>
-        <div class="cd-block"><span class="cd-number" id="cd-h">--</span><span class="cd-unit">Horas</span></div>
-        <div class="cd-sep">·</div>
-        <div class="cd-block"><span class="cd-number" id="cd-m">--</span><span class="cd-unit">Min</span></div>
-        <div class="cd-sep">·</div>
-        <div class="cd-block"><span class="cd-number" id="cd-s">--</span><span class="cd-unit">Seg</span></div>
+  <main id="experiencia">
+    <section class="countdown-wrap reveal" aria-labelledby="countdown-heading">
+      <div class="countdown-head">
+        <h2 class="countdown-title" id="countdown-heading"><small>Faltan</small>La experiencia está por comenzar</h2>
+        <p class="countdown-note" id="countdown-status" aria-live="polite">21 de octubre · Valle de Guadalupe</p>
       </div>
-    </div>
+      <div class="countdown" role="timer" aria-label="Cuenta regresiva para el evento">
+        <div class="time-unit"><span class="time-value" id="days">00</span><span class="time-label">Días</span></div>
+        <div class="time-unit"><span class="time-value" id="hours">00</span><span class="time-label">Horas</span></div>
+        <div class="time-unit"><span class="time-value" id="minutes">00</span><span class="time-label">Minutos</span></div>
+        <div class="time-unit"><span class="time-value" id="seconds">00</span><span class="time-label">Segundos</span></div>
+      </div>
+    </section>
 
-    <div class="divider">
-      <div class="gold-line"></div>
-    </div>
+    <section class="story">
+      <div class="story-copy reveal">
+        <span class="story-kicker">La experiencia</span>
+        <h2>Crear, degustar y compartir.</h2>
+        <p>Prepárate para descubrir nuevas formas de disfrutar el queso en una jornada que reúne conocimiento, creatividad y sabor. Un encuentro íntimo, rodeado por el paisaje del Valle, pensado para aprender, conversar y celebrar.</p>
+      </div>
+      <figure class="experience-card reveal">
+        <img src="assets/experiencia-lactalis.png" alt="Anfitriona de Lactalis preparando una tabla de quesos en un viñedo" width="896" height="1200">
+        <figcaption><span>Sabor · Nutrición · Creatividad</span><span>Valle de Guadalupe</span></figcaption>
+      </figure>
+    </section>
 
-    <div class="hotel-section">
-      <div class="hotel-img-wrap">
-        <img src="https://resortava.cancunhotelsweb.net/data/Photos/OriginalPhoto/16358/1635887/1635887638.JPEG"
-          alt="AVA Resort Cancún" onerror="this.style.display='none';">
-        <div class="hotel-overlay">
-          <div class="hotel-name">AVA Resort Cancún</div>
-          <div class="hotel-loc">Zona Hotelera · Cancún</div>
+    <section class="agenda-section" aria-labelledby="agenda-title">
+      <div class="agenda">
+        <div class="agenda-intro reveal">
+          <span class="story-kicker">21 · Octubre · 2026</span>
+          <h2 id="agenda-title">Una tarde para recordar.</h2>
+          <p>Desde la salida en Tijuana hasta la última sobremesa, cada momento forma parte de la experiencia.</p>
         </div>
+        <ol class="agenda-list">
+          <li class="agenda-item reveal"><time class="agenda-time" datetime="2026-10-21T12:00:00-07:00">12:00 PM</time><div class="agenda-detail"><h3>Salida desde Zona Río, Tijuana</h3><p>Inicio del recorrido hacia Valle de Guadalupe.</p></div></li>
+          <li class="agenda-item reveal"><time class="agenda-time" datetime="2026-10-21T14:00:00-07:00">2:00 PM</time><div class="agenda-detail"><h3>Llegada y bienvenida</h3><p>Recepción de invitados.</p></div></li>
+          <li class="agenda-item reveal"><time class="agenda-time" datetime="2026-10-21T14:30:00-07:00">2:30–3:30</time><div class="agenda-detail"><h3>Comida</h3><p>Una mesa para abrir la conversación y los sentidos.</p></div></li>
+          <li class="agenda-item highlight reveal"><time class="agenda-time" datetime="2026-10-21T15:30:00-07:00">3:30–5:00</time><div class="agenda-detail"><h3>Cata de quesos y experiencia gastronómica</h3><p>Reto por equipos para experimentar con sabores, texturas y combinaciones.</p><div class="tags"><span class="tag">Creación</span><span class="tag">Sabor</span><span class="tag">Diversión</span></div></div></li>
+          <li class="agenda-item reveal"><time class="agenda-time" datetime="2026-10-21T17:00:00-07:00">5:00–5:30</time><div class="agenda-detail"><h3>Evaluación, resultados y premiación 🏆</h3><p>Celebramos las propuestas más memorables.</p></div></li>
+          <li class="agenda-item reveal"><time class="agenda-time" datetime="2026-10-21T18:00:00-07:00">6:00–8:00</time><div class="agenda-detail"><h3>Convivencia y sobremesa</h3><p>Tiempo para disfrutar, conversar y compartir.</p></div></li>
+          <li class="agenda-item reveal"><time class="agenda-time" datetime="2026-10-21T20:00:00-07:00">8:00 PM</time><div class="agenda-detail"><h3>Regreso a Tijuana</h3><p>Salida desde Valle de Guadalupe.</p></div></li>
+          <li class="agenda-item reveal"><time class="agenda-time" datetime="2026-10-21T22:00:00-07:00">10:00 PM</time><div class="agenda-detail"><h3>Llegada a Zona Río, Tijuana</h3><p>Cierre de la experiencia.</p></div></li>
+        </ol>
       </div>
-      <div class="hotel-info-row">
-        <span>⭐ All Inclusive</span>
-        <span>🏖️ Frente al mar</span>
-        <span>🏨 Lujo 5 estrellas</span>
+    </section>
+
+    <section class="panorama" aria-label="Valle de Guadalupe">
+      <blockquote class="reveal">“Una experiencia para disfrutar, compartir y recordar.”<span>Lactalis · El arte del queso y la buena nutrición</span></blockquote>
+    </section>
+
+    <section class="finale">
+      <div class="date-lockup reveal">21·10·26<span>Valle de Guadalupe · Ensenada</span></div>
+      <div class="finale-copy reveal">
+        <p>Nos encontramos en el Valle para vivir una tarde donde cada sabor cuenta una historia.</p>
+        <span class="capacity">Cupo limitado · 40 médicos</span>
       </div>
-    </div>
+    </section>
+  </main>
 
-    <div class="benefits">
-      <div class="benefits-title">La invitación incluye</div>
-      <div class="benefits-list">
-        <div class="benefit-item">
-          <div class="benefit-dot"></div>Vuelo clase turista redondo
-        </div>
-        <div class="benefit-item">
-          <div class="benefit-dot"></div>Transportación aeropuerto–hotel
-        </div>
-        <div class="benefit-item">
-          <div class="benefit-dot"></div>Hospedaje durante el evento
-        </div>
-        <div class="benefit-item">
-          <div class="benefit-dot"></div>Alimentos all inclusive
-        </div>
-      </div>
-    </div>
-
-    <div class="music-bar">
-      <button class="music-btn" id="musicBtn" onclick="toggleMusic()">
-        <span id="musicIcon">▶</span>
-      </button>
-      <span class="music-label">Música de ambiente</span>
-      <div class="visualizer" id="visualizer">
-        <div class="vbar" style="height:5px"></div>
-        <div class="vbar" style="height:10px"></div>
-        <div class="vbar" style="height:7px"></div>
-        <div class="vbar" style="height:14px"></div>
-        <div class="vbar" style="height:8px"></div>
-        <div class="vbar" style="height:12px"></div>
-        <div class="vbar" style="height:6px"></div>
-      </div>
-    </div>
-
-    <div class="footer-note">
-      Esta invitación es personal e intransferible<br>
-      Confirme su asistencia con su ejecutivo Lactalis
-    </div>
-
-    <div class="footer-logos">
-      <span class="footer-logo">Alula Group</span>
-      <div class="gold-line" style="width:30px; margin:0;"></div>
-      <span class="footer-logo">Lactalis México</span>
-      <div class="gold-line" style="width:30px; margin:0;"></div>
-      <span class="footer-logo">Pedialact Premium</span>
-    </div>
-  </div>
-
-  <audio id="bgMusic" loop>
-    <source src="Luis%20Miguel%20%20Cuando%20Calienta%20el%20Sol.mp3" type="audio/mpeg">
-  </audio>
+  <footer><span class="brand-mark">Lactalis</span><span>El arte del queso y la buena nutrición</span></footer>
 
   <script>
-    // Particles
-    const container = document.getElementById('particles');
-    for (let i = 0; i < 70; i++) {
-      const p = document.createElement('div');
-      p.className = 'particle';
-      p.style.cssText = `left:${Math.random() * 100}%;top:${Math.random() * 100}%;animation-delay:${Math.random() * 5}s;animation-duration:${2 + Math.random() * 3}s;`;
-      container.appendChild(p);
-    }
+    (() => {
+      const target = new Date('2026-10-21T00:00:00-07:00').getTime();
+      const ids = ['days', 'hours', 'minutes', 'seconds'];
+      const nodes = ids.map((id) => document.getElementById(id));
+      const status = document.getElementById('countdown-status');
+      const pad = (value) => String(value).padStart(2, '0');
 
-    // Countdown — target: May 27 2026, midnight Mexico City (UTC-6)
-    const eventStart = new Date('2026-05-27T00:00:00-06:00');
-    function pad(n) { return String(n).padStart(2, '0'); }
-    function tick() {
-      const diff = eventStart - new Date();
-      if (diff <= 0) {
-        ['cd-d', 'cd-h', 'cd-m', 'cd-s'].forEach(id => document.getElementById(id).textContent = '00');
-        return;
+      function updateCountdown() {
+        const distance = target - Date.now();
+        if (distance <= 0) {
+          nodes.forEach((node) => { node.textContent = '00'; });
+          status.textContent = 'La experiencia comienza hoy';
+          return;
+        }
+        const values = [
+          Math.floor(distance / 86400000),
+          Math.floor((distance % 86400000) / 3600000),
+          Math.floor((distance % 3600000) / 60000),
+          Math.floor((distance % 60000) / 1000)
+        ];
+        nodes.forEach((node, index) => { node.textContent = pad(values[index]); });
       }
-      document.getElementById('cd-d').textContent = pad(Math.floor(diff / 86400000));
-      document.getElementById('cd-h').textContent = pad(Math.floor((diff % 86400000) / 3600000));
-      document.getElementById('cd-m').textContent = pad(Math.floor((diff % 3600000) / 60000));
-      document.getElementById('cd-s').textContent = pad(Math.floor((diff % 60000) / 1000));
-    }
-    tick();
-    setInterval(tick, 1000);
 
-    // Music
-    let playing = false;
-    const audio = document.getElementById('bgMusic');
-    const icon = document.getElementById('musicIcon');
-    const vbars = document.querySelectorAll('.vbar');
-    function toggleMusic() {
-      if (!playing) {
-        audio.volume = 0.25;
-        audio.play().catch(() => { });
-        icon.textContent = '⏸';
-        vbars.forEach((b, i) => { b.classList.add('playing'); b.style.animationDelay = (i * 0.09) + 's'; });
-        playing = true;
-      } else {
-        audio.pause();
-        icon.textContent = '▶';
-        vbars.forEach(b => b.classList.remove('playing'));
-        playing = false;
-      }
-    }
+      updateCountdown();
+      window.setInterval(updateCountdown, 1000);
+
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe(element));
+    })();
   </script>
 </body>
-
 </html>
