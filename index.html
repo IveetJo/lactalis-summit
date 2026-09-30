@@ -471,6 +471,64 @@
       text-transform: uppercase;
     }
 
+    .sound-control {
+      position: fixed;
+      right: clamp(1rem, 2.4vw, 2rem);
+      bottom: clamp(1rem, 2.4vw, 2rem);
+      z-index: 20;
+      display: inline-flex;
+      align-items: center;
+      gap: .7rem;
+      min-height: 3.25rem;
+      padding: .55rem .95rem .55rem .58rem;
+      border: 1px solid rgba(227,202,138,.78);
+      border-radius: 999px;
+      color: white;
+      background: rgba(4,20,37,.9);
+      box-shadow: 0 8px 32px rgba(4,20,37,.3), 0 0 0 0 rgba(227,202,138,.48);
+      backdrop-filter: blur(12px);
+      font: inherit;
+      cursor: pointer;
+      animation: sound-invite 2.2s ease-in-out infinite;
+      transition: transform .25s ease, border-color .25s ease, background .25s ease;
+    }
+    .sound-control:hover { transform: translateY(-2px); border-color: var(--gold-light); background: rgba(4,20,37,.98); }
+    .sound-control:focus-visible { outline: 3px solid white; outline-offset: 3px; }
+    .sound-control.is-playing { animation: none; box-shadow: 0 8px 32px rgba(4,20,37,.28); }
+    .sound-orb {
+      position: relative;
+      display: grid;
+      place-items: center;
+      width: 2.1rem;
+      height: 2.1rem;
+      border-radius: 50%;
+      color: var(--navy);
+      background: var(--gold-light);
+      overflow: hidden;
+    }
+    .sound-note { font-family: Georgia, "Times New Roman", serif; font-size: 1.2rem; transform: translateY(-.05rem); }
+    .sound-bars {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+      height: 1rem;
+    }
+    .sound-bars i { display: block; width: 2px; height: 35%; background: var(--navy); animation: sound-bar .75s ease-in-out infinite alternate; }
+    .sound-bars i:nth-child(2) { animation-delay: -.3s; }
+    .sound-bars i:nth-child(3) { animation-delay: -.55s; }
+    .is-playing .sound-note { display: none; }
+    .is-playing .sound-bars { display: flex; }
+    .sound-copy { display: grid; text-align: left; line-height: 1.12; }
+    .sound-copy strong { font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; }
+    .sound-copy small { margin-top: .18rem; color: rgba(255,255,255,.62); font-size: .61rem; letter-spacing: .04em; }
+    @keyframes sound-invite {
+      0%, 100% { transform: translateY(0); box-shadow: 0 8px 32px rgba(4,20,37,.3), 0 0 0 0 rgba(227,202,138,.46); }
+      45% { transform: translateY(-4px); box-shadow: 0 11px 34px rgba(4,20,37,.36), 0 0 0 10px rgba(227,202,138,0); }
+      55% { transform: translateY(-4px) rotate(-1deg); }
+    }
+    @keyframes sound-bar { from { height: 25%; } to { height: 100%; } }
+
     .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
     .reveal.visible { opacity: 1; transform: none; }
 
@@ -513,11 +571,14 @@
       .agenda-item { grid-template-columns: 4.7rem 1fr; }
       .agenda-item::before { left: 5.15rem; }
       .experience-card figcaption { flex-direction: column; }
+      .sound-control { right: .75rem; bottom: .75rem; padding-right: .8rem; }
+      .sound-copy small { display: none; }
     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       .reveal { opacity: 1; transform: none; transition: none; }
       .hero-logo-stage, .hero-logo-stage::before, .hero-logo-stage::after, .hero-logo-word { animation: none; opacity: 1; }
+      .sound-control, .sound-bars i { animation: none; }
     }
   </style>
 </head>
@@ -604,6 +665,12 @@
     </section>
   </main>
 
+  <button class="sound-control" id="sound-control" type="button" aria-pressed="false" aria-label="Reproducir música de fondo">
+    <span class="sound-orb" aria-hidden="true"><span class="sound-note">♪</span><span class="sound-bars"><i></i><i></i><i></i></span></span>
+    <span class="sound-copy"><strong id="sound-label">Dale play</strong><small>Red Red Wine · UB40</small></span>
+  </button>
+  <audio id="background-audio" loop preload="metadata"><source src="assets/red-red-wine.mp3" type="audio/mpeg"></audio>
+
   <footer><span class="brand-mark" aria-label="Lactalis"><img src="assets/Lactalis_2023_logo.svg" alt="Lactalis" width="182" height="66"></span><span>El arte del queso y la buena nutrición</span></footer>
 
   <script>
@@ -642,6 +709,33 @@
         });
       }, { threshold: 0.12 });
       document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe(element));
+
+      const audio = document.getElementById('background-audio');
+      const soundControl = document.getElementById('sound-control');
+      const soundLabel = document.getElementById('sound-label');
+      let audioStarted = false;
+      audio.volume = 0.38;
+
+      soundControl.addEventListener('click', async () => {
+        if (audio.paused) {
+          try {
+            await audio.play();
+            audioStarted = true;
+            soundControl.classList.add('is-playing');
+            soundControl.setAttribute('aria-pressed', 'true');
+            soundControl.setAttribute('aria-label', 'Pausar música de fondo');
+            soundLabel.textContent = 'Pausar música';
+          } catch (error) {
+            soundLabel.textContent = 'Intenta de nuevo';
+          }
+        } else {
+          audio.pause();
+          soundControl.classList.remove('is-playing');
+          soundControl.setAttribute('aria-pressed', 'false');
+          soundControl.setAttribute('aria-label', 'Continuar música de fondo');
+          soundLabel.textContent = audioStarted ? 'Continuar música' : 'Dale play';
+        }
+      });
     })();
   </script>
 </body>
