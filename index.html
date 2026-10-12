@@ -96,7 +96,11 @@
       box-shadow: 0 7px 22px rgba(3,18,32,.18);
       backdrop-filter: blur(8px);
     }
-    .brand-mark img { width: clamp(6.1rem, 9vw, 8rem); height: auto; }
+    .brand-mark img {
+      display: block;
+      width: clamp(8.5rem, 12vw, 10.5rem);
+      height: auto;
+    }
     .edition { color: rgba(255,255,255,.68); }
     .hero-content {
       position: relative;
@@ -109,62 +113,24 @@
       z-index: 1;
       top: 32%;
       right: clamp(2rem, 8vw, 8rem);
-      width: clamp(300px, 39vw, 590px);
-      aspect-ratio: 2.5 / 1;
+      width: clamp(300px, 35vw, 520px);
+      aspect-ratio: 738 / 378;
       display: grid;
       place-items: center;
+      padding: clamp(.65rem, 1.4vw, 1.15rem);
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.72);
+      border-radius: clamp(1rem, 2vw, 1.6rem);
+      background: rgba(255,255,255,.96);
+      box-shadow: 0 24px 60px rgba(0,0,0,.25);
       opacity: 0;
       animation: logo-arrival 1.5s cubic-bezier(.2,.8,.2,1) .25s forwards;
       filter: drop-shadow(0 18px 34px rgba(0,0,0,.32));
     }
-    .hero-logo-stage::before,
-    .hero-logo-stage::after {
-      content: "";
-      position: absolute;
-      inset: 14% 1%;
-      border: 3px solid rgba(255,255,255,.78);
-      border-radius: 50%;
-      animation: logo-orbit 7s ease-in-out infinite;
-    }
-    .hero-logo-stage::after {
-      inset: 20% 4%;
-      border: 3px solid rgba(227,202,138,.94);
-      animation-direction: reverse;
-      animation-duration: 9s;
-    }
-    .hero-logo-word {
-      position: relative;
-      z-index: 2;
-      padding: .7rem 1.5rem;
-      color: white;
-      font-size: clamp(2.1rem, 4.8vw, 4.7rem);
-      font-weight: 760;
-      letter-spacing: .08em;
-      line-height: 1;
-      text-shadow: 0 2px 24px rgba(0,0,0,.45);
-      animation: logo-breathe 4s ease-in-out 1.8s infinite;
-    }
-    .hero-logo-word span { color: var(--gold-light); }
-    .hero-logo-caption {
-      position: absolute;
-      bottom: 3%;
-      color: rgba(255,255,255,.76);
-      font-size: .65rem;
-      font-weight: 700;
-      letter-spacing: .3em;
-      text-transform: uppercase;
-    }
+    .hero-logo-stage img { display: block; width: 100%; height: auto; }
     @keyframes logo-arrival {
       from { opacity: 0; transform: scale(.82) translateY(20px); filter: blur(8px) drop-shadow(0 18px 34px rgba(0,0,0,.32)); }
       to { opacity: 1; transform: scale(1) translateY(0); filter: blur(0) drop-shadow(0 18px 34px rgba(0,0,0,.32)); }
-    }
-    @keyframes logo-orbit {
-      0%, 100% { transform: scale(.96) rotate(-4deg); opacity: .55; }
-      50% { transform: scale(1.03) rotate(4deg); opacity: 1; }
-    }
-    @keyframes logo-breathe {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.025); }
     }
     .eyebrow {
       display: flex;
@@ -545,7 +511,6 @@
         width: min(88vw, 470px);
         transform: translateX(-50%);
         animation-name: logo-arrival-mobile;
-        background: radial-gradient(ellipse, rgba(4,19,34,.72) 0%, rgba(4,19,34,.35) 54%, transparent 72%);
       }
       @keyframes logo-arrival-mobile {
         from { opacity: 0; transform: translateX(-50%) scale(.82) translateY(20px); filter: blur(8px); }
@@ -577,7 +542,7 @@
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       .reveal { opacity: 1; transform: none; transition: none; }
-      .hero-logo-stage, .hero-logo-stage::before, .hero-logo-stage::after, .hero-logo-word { animation: none; opacity: 1; }
+      .hero-logo-stage { animation: none; opacity: 1; }
       .sound-control, .sound-bars i { animation: none; }
     }
   </style>
@@ -587,12 +552,11 @@
 
   <header class="hero" aria-labelledby="titulo-evento">
     <div class="topline">
-      <span class="brand-mark" aria-label="Lactalis"><img src="assets/Lactalis_2023_logo.svg" alt="Lactalis" width="182" height="66"></span>
+      <span class="brand-mark" aria-label="Lactalis"><img src="assets/Lactalis_Nutriendo_el_futuro.png" alt="Lactalis — Nutriendo el futuro" width="738" height="378"></span>
       <span class="edition">Invitación privada · Edición 2026</span>
     </div>
-    <div class="hero-logo-stage" aria-label="Lactalis">
-      <div class="hero-logo-word">LACTA<span>LIS</span></div>
-      <div class="hero-logo-caption">Savoir-faire laitier</div>
+    <div class="hero-logo-stage">
+      <img src="assets/Lactalis_Nutriendo_el_futuro.png" alt="Lactalis — Nutriendo el futuro" width="738" height="378">
     </div>
     <div class="hero-content">
       <p class="eyebrow">Una experiencia gastronómica</p>
@@ -671,7 +635,7 @@
   </button>
   <audio id="background-audio" loop preload="metadata"><source src="assets/red-red-wine.mp3" type="audio/mpeg"></audio>
 
-  <footer><span class="brand-mark" aria-label="Lactalis"><img src="assets/Lactalis_2023_logo.svg" alt="Lactalis" width="182" height="66"></span><span>El arte del queso y la buena nutrición</span></footer>
+  <footer><span class="brand-mark" aria-label="Lactalis"><img src="assets/Lactalis_Nutriendo_el_futuro.png" alt="Lactalis — Nutriendo el futuro" width="738" height="378"></span><span>El arte del queso y la buena nutrición</span></footer>
 
   <script>
     (() => {
