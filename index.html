@@ -89,16 +89,11 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: .35rem .65rem;
-      border: 1px solid rgba(255,255,255,.34);
-      border-radius: 999px;
-      background: rgba(255,255,255,.9);
-      box-shadow: 0 7px 22px rgba(3,18,32,.18);
-      backdrop-filter: blur(8px);
+      filter: drop-shadow(0 7px 14px rgba(3,18,32,.3));
     }
     .brand-mark img {
       display: block;
-      width: clamp(8.5rem, 12vw, 10.5rem);
+      width: clamp(9rem, 13vw, 11.5rem);
       height: auto;
     }
     .edition { color: rgba(255,255,255,.68); }
@@ -114,18 +109,11 @@
       top: 32%;
       right: clamp(2rem, 8vw, 8rem);
       width: clamp(300px, 35vw, 520px);
-      aspect-ratio: 738 / 378;
       display: grid;
       place-items: center;
-      padding: clamp(.65rem, 1.4vw, 1.15rem);
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,.72);
-      border-radius: clamp(1rem, 2vw, 1.6rem);
-      background: rgba(255,255,255,.96);
-      box-shadow: 0 24px 60px rgba(0,0,0,.25);
       opacity: 0;
       animation: logo-arrival 1.5s cubic-bezier(.2,.8,.2,1) .25s forwards;
-      filter: drop-shadow(0 18px 34px rgba(0,0,0,.32));
+      filter: drop-shadow(0 18px 28px rgba(0,0,0,.52));
     }
     .hero-logo-stage img { display: block; width: 100%; height: auto; }
     @keyframes logo-arrival {
@@ -552,11 +540,11 @@
 
   <header class="hero" aria-labelledby="titulo-evento">
     <div class="topline">
-      <span class="brand-mark" aria-label="Lactalis"><img src="assets/Lactalis_Nutriendo_el_futuro.png" alt="Lactalis — Nutriendo el futuro" width="738" height="378"></span>
+      <span class="brand-mark" aria-label="Lactalis"><img src="assets/Lactalis_Mexico_transparente.png" alt="Lactalis México — Nutriendo el futuro" width="1761" height="893"></span>
       <span class="edition">Invitación privada · Edición 2026</span>
     </div>
     <div class="hero-logo-stage">
-      <img src="assets/Lactalis_Nutriendo_el_futuro.png" alt="Lactalis — Nutriendo el futuro" width="738" height="378">
+      <img src="assets/Lactalis_Mexico_transparente.png" alt="Lactalis México — Nutriendo el futuro" width="1761" height="893">
     </div>
     <div class="hero-content">
       <p class="eyebrow">Una experiencia gastronómica</p>
@@ -635,7 +623,7 @@
   </button>
   <audio id="background-audio" loop preload="metadata"><source src="assets/red-red-wine.mp3" type="audio/mpeg"></audio>
 
-  <footer><span class="brand-mark" aria-label="Lactalis"><img src="assets/Lactalis_Nutriendo_el_futuro.png" alt="Lactalis — Nutriendo el futuro" width="738" height="378"></span><span>El arte del queso y la buena nutrición</span></footer>
+  <footer><span class="brand-mark" aria-label="Lactalis"><img src="assets/Lactalis_Mexico_transparente.png" alt="Lactalis México — Nutriendo el futuro" width="1761" height="893"></span><span>El arte del queso y la buena nutrición</span></footer>
 
   <script>
     (() => {
